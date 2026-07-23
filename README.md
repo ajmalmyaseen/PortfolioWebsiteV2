@@ -4,11 +4,12 @@ A modern, responsive personal portfolio website built using **HTML5**, **CSS3**,
 
 ## 🚀 Live Demo
 
-🔗 https://your-portfolio-link.com
+🔗 https://ajmalmyaseen.vercel.app/index.html
 
 ## 📸 Preview
 
-_Add screenshots or a GIF of your portfolio here._
+
+<img width="1888" height="897" alt="image" src="https://github.com/user-attachments/assets/6522b5af-7fde-4464-b5eb-60a5d38a1777" />
 
 ---
 
@@ -96,13 +97,13 @@ PortfolioWebsite/
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/PortfolioWebsite.git
+git clone https://github.com/ajmalmyaseen/PortfolioWebsiteV2.git
 ```
 
 Go to the project folder:
 
 ```bash
-cd PortfolioWebsite
+cd PortfolioWebsiteV2
 ```
 
 Compile SCSS:
@@ -119,9 +120,9 @@ Open `index.html` in your browser.
 
 **Ajmal Mohamed Yaseen**
 
-- 📧 Email: your-email@example.com
-- 💼 LinkedIn: https://linkedin.com/in/your-profile
-- 💻 GitHub: https://github.com/yourusername
+- 📧 Email: ajmalmyaseen@gmail.com
+- 💼 LinkedIn: [https://linkedin.com/in/ajmalmohamedyaseen](https://www.linkedin.com/in/ajmal-mohamed-yaseen/)
+- 💻 GitHub: [https://github.com/ajmalmyaseen](https://github.com/ajmalmyaseen/)
 
 ---
 
