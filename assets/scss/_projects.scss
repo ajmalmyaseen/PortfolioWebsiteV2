@@ -1,0 +1,238 @@
+/*==========================================
+    PROJECTS PAGE
+==========================================*/
+
+.project-page {
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-page::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(139, 92, 246, 0.12);
+    border-radius: 50%;
+    filter: blur(120px);
+    top: -120px;
+    right: -120px;
+}
+
+.project-page::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: rgba(59, 130, 246, 0.12);
+    border-radius: 50%;
+    filter: blur(120px);
+    bottom: -120px;
+    left: -80px;
+}
+
+/*==========================================
+    PROJECT CARD
+==========================================*/
+
+.project-card {
+    @include glass;
+    border-radius: 22px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: $transition;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: $purple-glow-lg;
+}
+
+/*==========================================
+    PROJECT IMAGE
+==========================================*/
+
+.project-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+/*==========================================
+    PROJECT CONTENT
+==========================================*/
+
+.project-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-content h3 {
+    color: $white;
+    margin-bottom: 15px;
+    font-weight: $fw-bold;
+}
+
+.project-content p {
+    color: $text-muted;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+/*==========================================
+    TECH STACK
+==========================================*/
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tech-stack span {
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: rgba(255,255,255,.08);
+    color: $text-light;
+    font-size: .85rem;
+    transition: $transition;
+}
+
+.tech-stack span:hover {
+    background: $primary;
+    color: white;
+}
+
+/*==========================================
+    BUTTONS
+==========================================*/
+
+.project-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project-buttons .btn {
+    border-radius: 50px;
+    padding: 12px 24px;
+    transition: $transition;
+    font-weight: $fw-semibold;
+}
+
+.project-buttons .btn i {
+    margin-right: 8px;
+}
+
+.project-buttons .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: $purple-glow;
+}
+
+/*==========================================
+    PROJECT OVERLAY
+==========================================*/
+
+.project-card {
+    position: relative;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.25),
+        transparent 40%
+    );
+    pointer-events: none;
+}
+
+/*==========================================
+    FOOTER
+==========================================*/
+
+footer {
+    margin-top: 80px;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+footer p {
+    color: $text-muted;
+    margin: 0;
+}
+
+/*==========================================
+    RESPONSIVE
+==========================================*/
+
+@media (max-width:992px){
+
+    .project-page{
+        text-align:center;
+    }
+
+    .project-buttons{
+        justify-content:center;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .project-page{
+        padding-top:100px;
+    }
+
+    .project-card img{
+        height:220px;
+    }
+
+    .project-content{
+        padding:25px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .project-card img{
+        height:190px;
+    }
+
+    .project-content{
+        padding:20px;
+    }
+
+    .project-content h3{
+        font-size:1.4rem;
+    }
+
+    .project-buttons{
+        flex-direction:column;
+    }
+
+    .project-buttons .btn{
+        width:100%;
+        justify-content:center;
+        display:flex;
+    }
+
+    .tech-stack{
+        justify-content:center;
+    }
+
+}

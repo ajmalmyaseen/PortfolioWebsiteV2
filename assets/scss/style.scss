@@ -1,0 +1,646 @@
+/*==========================================
+  PORTFOLIO SCSS
+  Author : Ajmal Mohamed Yaseen
+==========================================*/
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ==========================
+        IMPORTS
+========================== */
+
+@import "variables";
+@import "navbar";
+@import "hero";
+@import "technology";
+@import "animations";
+@import "about";
+@import "contact";
+@import "certificate";
+@import "projects";
+@import "theme";
+
+/* ==========================
+        GLOBAL RESET
+========================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:$bg-color;
+
+    color:$text-color;
+
+    overflow-x:hidden;
+
+    transition:.4s ease;
+
+}
+
+/* ==========================
+        SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:$primary;
+
+    border-radius:20px;
+
+}
+
+/* ==========================
+        LINKS
+========================== */
+
+a{
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ==========================
+        SECTION
+========================== */
+
+section{
+
+    padding:100px 0;
+
+    position:relative;
+
+}
+
+.container{
+
+    max-width:1320px;
+
+}
+
+/* ==========================
+        TITLES
+========================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title h6{
+
+    color:$primary;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-weight:600;
+
+}
+
+.section-title h2{
+
+    font-size:2.7rem;
+
+    font-weight:700;
+
+    margin-top:10px;
+
+}
+
+/* ==========================
+        BUTTONS
+========================== */
+
+.btn{
+
+    border-radius:50px;
+
+    padding:14px 35px;
+
+    font-weight:600;
+
+}
+
+.btn-primary{
+
+    background:$primary;
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:$secondary;
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline-primary{
+
+    border:2px solid $primary;
+
+    color:$primary;
+
+}
+
+.btn-outline-primary:hover{
+
+    background:$primary;
+
+    color:white;
+
+}
+
+/* ==========================
+        CARDS
+========================== */
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+}
+
+/* ==========================
+        IMAGE
+========================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ==========================
+        TEXT
+========================== */
+
+.text-primary{
+
+    color:$primary !important;
+
+}
+
+.text-secondary{
+
+    color:#9ca3af !important;
+
+}
+
+/* ==========================
+        UTILITIES
+========================== */
+
+.shadow-purple{
+
+    box-shadow:0 0 40px rgba(124,58,237,.4);
+
+}
+
+.rounded-30{
+
+    border-radius:30px;
+
+}
+
+/* ==========================
+        BACKGROUND BLOBS
+========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:400px;
+
+    height:400px;
+
+    background:rgba(124,58,237,.25);
+
+    filter:blur(150px);
+
+    top:-150px;
+
+    left:-150px;
+
+    z-index:-2;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:400px;
+
+    height:400px;
+
+    background:rgba(79,70,229,.20);
+
+    filter:blur(150px);
+
+    bottom:-150px;
+
+    right:-150px;
+
+    z-index:-2;
+
+}
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+    .section-title h2{
+
+        font-size:2.2rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    body{
+
+        text-align:center;
+
+    }
+
+    .section-title h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .btn{
+
+        width:100%;
+
+        margin-bottom:15px;
+
+    }
+
+}
+
+.footer{
+
+    margin-top:100px;
+    padding:60px 0 25px;
+
+    @include glass;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer-logo{
+
+    font-size:2rem;
+    font-weight:700;
+    text-decoration:none;
+
+}
+
+.footer h5{
+
+    color:$white;
+    margin-bottom:20px;
+
+}
+
+.footer-links{
+
+    list-style:none;
+    padding:0;
+
+}
+
+.footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-links a{
+
+    color:$text-muted;
+    text-decoration:none;
+    transition:$transition;
+
+}
+
+.footer-links a:hover{
+
+    color:$primary;
+    padding-left:8px;
+
+}
+
+.footer-social{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.footer-social a{
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    @include flex-center;
+
+    background:rgba(255,255,255,.06);
+
+    color:white;
+
+    transition:$transition;
+
+}
+
+.footer-social a:hover{
+
+    background:$primary;
+
+    transform:translateY(-5px);
+
+}
+
+.btn{
+
+    transition:.3s ease;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.project-card,
+.certificate-card,
+.tech-card,
+.info-card{
+
+    transition:.35s;
+
+}
+
+.project-card:hover,
+.certificate-card:hover,
+.tech-card:hover,
+.info-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+img{
+
+    transition:.5s;
+
+}
+
+.project-card:hover img,
+.certificate-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.fade-up{
+
+    animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-image{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+@media(max-width:576px){
+
+.hero-title{
+
+font-size:2rem;
+
+}
+
+.display-4{
+
+font-size:2rem;
+
+}
+
+.btn{
+
+width:100%;
+
+margin-bottom:15px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+flex-direction:column;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.navbar-nav{
+
+text-align:center;
+
+}
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero-image{
+
+margin-top:40px;
+
+}
+
+}
+
+@media(min-width:1400px){
+
+.container{
+
+max-width:1320px;
+
+}
+
+}
+
+.code-card {
+
+    @include glass;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    font-family: "Fira Code", monospace;
+
+    box-shadow: $purple-glow;
+
+    overflow-x: auto;
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+.code-card pre {
+
+    margin: 0;
+
+    white-space: pre-wrap;
+
+    color: $white;
+
+    line-height: 1.8;
+}
+
+.keyword {
+
+    color: #C792EA;
+    font-weight: 600;
+}
+
+.variable {
+
+    color: #82AAFF;
+}
+
+.property {
+
+    color: #89DDFF;
+}
+
+.string {
+
+    color: #C3E88D;
+}
+
+.boolean {
+
+    color: #FFCB6B;
+}

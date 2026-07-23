@@ -1,0 +1,40 @@
+/*==========================================
+  LIGHT THEME
+==========================================*/
+
+body.light-theme {
+    background: #f8fafc;
+    color: #111827;
+}
+
+body.light-theme .custom-navbar {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .glass,
+body.light-theme .tech-card,
+body.light-theme .hero-badge,
+body.light-theme .code-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .nav-link,
+body.light-theme .logo,
+body.light-theme .hero-title,
+body.light-theme .hero-text,
+body.light-theme .tech-card h6,
+body.light-theme .social-icons a {
+    color: #111827 !important;
+}
+
+body.light-theme .btn-outline-light {
+    color: #111827;
+    border-color: #111827;
+}
+
+body.light-theme .btn-outline-light:hover {
+    background: #111827;
+    color: #fff;
+}

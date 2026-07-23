@@ -1,0 +1,244 @@
+/*==========================================
+    CONTACT PAGE
+==========================================*/
+
+.contact-page {
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-page::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(139, 92, 246, 0.12);
+    border-radius: 50%;
+    filter: blur(120px);
+    top: -120px;
+    right: -100px;
+}
+
+.contact-page::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: rgba(59, 130, 246, 0.12);
+    border-radius: 50%;
+    filter: blur(120px);
+    bottom: -100px;
+    left: -80px;
+}
+
+/*==========================================
+    CONTACT INFO CARDS
+==========================================*/
+
+.contact-info {
+    @include glass;
+    border-radius: 20px;
+    padding: 30px;
+    transition: $transition;
+}
+
+.contact-info:hover {
+    transform: translateY(-8px);
+    box-shadow: $purple-glow;
+}
+
+.contact-info h4 {
+    color: $white;
+    margin-bottom: 30px;
+}
+
+.contact-info .d-flex {
+    align-items: flex-start;
+}
+
+.contact-info i {
+    font-size: 2rem;
+    color: $primary;
+}
+
+.contact-info h6 {
+    color: $white;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    color: $text-muted;
+    margin-bottom: 0;
+}
+
+/*==========================================
+    SOCIAL ICONS
+==========================================*/
+
+.contact-social {
+    @include glass;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 25px;
+}
+
+.contact-social h5 {
+    margin-bottom: 20px;
+}
+
+.contact-social .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-social .social-icons a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    @include flex-center;
+    background: rgba(255,255,255,.05);
+    color: $white;
+    transition: $transition;
+    font-size: 1.2rem;
+}
+
+.contact-social .social-icons a:hover {
+    background: $primary;
+    transform: translateY(-5px);
+    box-shadow: $purple-glow;
+}
+
+/*==========================================
+    CONTACT FORM
+==========================================*/
+
+.contact-form {
+    @include glass;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.contact-form .form-control {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    color: $white;
+    padding: 14px 18px;
+    border-radius: 12px;
+    transition: $transition;
+}
+
+.contact-form .form-control::placeholder {
+    color: $text-muted;
+}
+
+.contact-form .form-control:focus {
+    background: rgba(255,255,255,.08);
+    border-color: $primary;
+    box-shadow: none;
+    color: $white;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form .btn {
+    border-radius: 50px;
+    padding: 12px 35px;
+    font-weight: $fw-semibold;
+}
+
+.contact-form .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: $purple-glow;
+}
+
+/*==========================================
+    GOOGLE MAP
+==========================================*/
+
+.map-container {
+    @include glass;
+    padding: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 15px;
+}
+
+/*==========================================
+    FOOTER
+==========================================*/
+
+footer {
+    margin-top: 80px;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+footer p {
+    color: $text-muted;
+}
+
+/*==========================================
+    RESPONSIVE
+==========================================*/
+
+@media (max-width:992px) {
+
+    .contact-page {
+        text-align: center;
+    }
+
+    .contact-info,
+    .contact-social {
+        margin-bottom: 30px;
+    }
+
+    .contact-info .d-flex {
+        justify-content: center;
+        text-align: left;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .contact-page {
+        padding-top: 100px;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+
+    .contact-social .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .contact-form,
+    .contact-info,
+    .contact-social {
+        padding: 25px;
+    }
+
+    .contact-form .btn {
+        width: 100%;
+    }
+
+    .map-container iframe {
+        height: 280px;
+    }
+
+}

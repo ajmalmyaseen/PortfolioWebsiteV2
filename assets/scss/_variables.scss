@@ -1,0 +1,210 @@
+/*==========================================
+  VARIABLES
+  Portfolio Theme
+==========================================*/
+
+/*============ COLORS ============*/
+
+// Primary Colors
+$primary: #8b5cf6;
+$primary-light: #a855f7;
+$primary-dark: #6d28d9;
+
+// Secondary Colors
+$secondary: #6366f1;
+$secondary-light: #818cf8;
+
+// Background Colors
+$bg-color: #09090b;
+$bg-secondary: #111827;
+$bg-card: rgba(17, 24, 39, 0.65);
+
+// Text Colors
+$text-color: #f8fafc;
+$text-light: #cbd5e1;
+$text-muted: #94a3b8;
+
+// Utility Colors
+$white: #ffffff;
+$black: #000000;
+$success: #22c55e;
+$danger: #ef4444;
+$warning: #f59e0b;
+$info: #0ea5e9;
+
+// Border
+$border-color: rgba(255,255,255,.08);
+
+
+/*============ GRADIENTS ============*/
+
+$primary-gradient: linear-gradient(
+135deg,
+#8b5cf6 0%,
+#6366f1 100%
+);
+
+$hero-gradient: linear-gradient(
+135deg,
+#09090b 0%,
+#111827 100%
+);
+
+$glass-gradient: linear-gradient(
+135deg,
+rgba(255,255,255,.08),
+rgba(255,255,255,.03)
+);
+
+
+/*============ SHADOWS ============*/
+
+$shadow-sm: 0 5px 15px rgba(0,0,0,.2);
+
+$shadow-md: 0 10px 30px rgba(0,0,0,.35);
+
+$shadow-lg: 0 25px 60px rgba(0,0,0,.45);
+
+$purple-glow: 0 0 30px rgba(139,92,246,.45);
+
+$purple-glow-lg: 0 0 60px rgba(139,92,246,.55);
+
+
+/*============ BORDER RADIUS ============*/
+
+$radius-sm: 10px;
+$radius-md: 20px;
+$radius-lg: 30px;
+$radius-xl: 50px;
+$radius-round: 999px;
+
+
+/*============ FONT ============*/
+
+$font-family: "Poppins", sans-serif;
+
+$fw-light:300;
+$fw-normal:400;
+$fw-medium:500;
+$fw-semibold:600;
+$fw-bold:700;
+$fw-extrabold:800;
+
+
+/*============ FONT SIZE ============*/
+
+$fs-xs:.75rem;
+$fs-sm:.875rem;
+$fs-md:1rem;
+$fs-lg:1.125rem;
+$fs-xl:1.4rem;
+$fs-2xl:2rem;
+$fs-3xl:3rem;
+$fs-4xl:4rem;
+
+
+/*============ SPACING ============*/
+
+$space-1:.5rem;
+$space-2:1rem;
+$space-3:1.5rem;
+$space-4:2rem;
+$space-5:3rem;
+$space-6:5rem;
+
+
+/*============ TRANSITIONS ============*/
+
+$transition-fast:.25s ease;
+
+$transition:.4s ease;
+
+$transition-slow:.6s ease;
+
+
+/*============ Z INDEX ============*/
+
+$z-navbar:999;
+
+$z-dropdown:1000;
+
+$z-modal:1050;
+
+
+/*============ GLASS EFFECT ============*/
+
+$glass-bg: rgba(255,255,255,.05);
+
+$glass-border: rgba(255,255,255,.08);
+
+$glass-blur: blur(20px);
+
+
+/*============ MIXINS ============*/
+
+@mixin flex-center {
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+@mixin glass {
+
+    background:$glass-bg;
+    backdrop-filter:$glass-blur;
+    -webkit-backdrop-filter:$glass-blur;
+    border:1px solid $glass-border;
+
+}
+
+@mixin transition {
+
+    transition:$transition;
+
+}
+
+@mixin button {
+
+    padding:14px 34px;
+    border-radius:$radius-round;
+    font-weight:$fw-semibold;
+    transition:$transition;
+    cursor:pointer;
+    border:none;
+
+}
+
+@mixin card {
+
+    @include glass;
+
+    border-radius:$radius-md;
+    padding:30px;
+    transition:$transition;
+
+}
+
+@mixin section-padding {
+
+    padding:100px 0;
+
+}
+
+@mixin heading {
+
+    font-size:$fs-3xl;
+    font-weight:$fw-bold;
+    line-height:1.2;
+
+}
+
+
+/*============ BREAKPOINTS ============*/
+
+$mobile:576px;
+$tablet:768px;
+$laptop:992px;
+$desktop:1200px;
+$large-desktop:1400px;

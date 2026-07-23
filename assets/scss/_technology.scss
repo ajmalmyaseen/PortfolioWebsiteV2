@@ -1,0 +1,257 @@
+/*==========================================
+  TECHNOLOGIES SECTION
+==========================================*/
+
+.technologies {
+    position: relative;
+    background: transparent;
+}
+
+/* ==========================
+        GRID
+========================== */
+
+.technologies .row {
+    justify-content: center;
+}
+
+/* ==========================
+        TECH CARD
+========================== */
+
+.tech-card {
+
+    @include card;
+
+    text-align: center;
+
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+/* Top Glow */
+
+.tech-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 4px;
+
+    background: $primary-gradient;
+
+    transition: .5s;
+
+}
+
+.tech-card:hover::before {
+
+    left: 0;
+
+}
+
+/* Hover Effect */
+
+.tech-card:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow: $purple-glow-lg;
+
+    border-color: rgba(139,92,246,.4);
+
+}
+
+/* ==========================
+        ICON
+========================== */
+
+.tech-card i {
+
+    font-size: 3.5rem;
+
+    margin-bottom: 18px;
+
+    transition: .4s;
+
+}
+
+/* Individual Colors */
+
+.fa-html5 {
+
+    color: #E34F26;
+
+}
+
+.fa-css3-alt {
+
+    color: #1572B6;
+
+}
+
+.fa-js {
+
+    color: #F7DF1E;
+
+}
+
+.fa-bootstrap {
+
+    color: #7952B3;
+
+}
+
+.fa-react {
+
+    color: #61DAFB;
+
+}
+
+.fa-git-alt {
+
+    color: #F05032;
+
+}
+
+.fa-github {
+
+    color: $white;
+
+}
+
+.fa-code {
+
+    color: $primary;
+
+}
+
+/* Icon Animation */
+
+.tech-card:hover i {
+
+    transform: scale(1.15) rotate(8deg);
+
+}
+
+/* ==========================
+        TITLE
+========================== */
+
+.tech-card h6 {
+
+    color: $text-light;
+
+    font-size: 1rem;
+
+    font-weight: $fw-semibold;
+
+    margin: 0;
+
+    transition: .3s;
+
+}
+
+.tech-card:hover h6 {
+
+    color: $white;
+
+}
+
+/* ==========================
+        BACKGROUND EFFECT
+========================== */
+
+.tech-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(139,92,246,.08);
+
+    border-radius: 50%;
+
+    top: -120px;
+    right: -120px;
+
+    transition: .4s;
+
+}
+
+.tech-card:hover::after {
+
+    transform: scale(1.6);
+
+}
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media (max-width:992px){
+
+    .tech-card{
+
+        height:170px;
+
+    }
+
+    .tech-card i{
+
+        font-size:3rem;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .tech-card{
+
+        height:160px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .tech-card{
+
+        height:150px;
+
+    }
+
+    .tech-card i{
+
+        font-size:2.6rem;
+
+    }
+
+    .tech-card h6{
+
+        font-size:.9rem;
+
+    }
+
+}

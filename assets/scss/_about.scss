@@ -1,0 +1,269 @@
+/*==========================================
+    ABOUT PAGE
+==========================================*/
+
+.about-page {
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-page::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(139, 92, 246, 0.12);
+    border-radius: 50%;
+    filter: blur(120px);
+    top: -100px;
+    right: -120px;
+}
+
+.about-page::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: rgba(59, 130, 246, 0.10);
+    border-radius: 50%;
+    filter: blur(120px);
+    bottom: -120px;
+    left: -80px;
+}
+
+/*==========================================
+    PROFILE IMAGE
+==========================================*/
+
+.about-page .hero-image {
+    max-width: 420px;
+    width: 100%;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: $purple-glow-lg;
+    transition: $transition;
+}
+
+.about-page .hero-image:hover {
+    transform: scale(1.03);
+}
+
+/*==========================================
+    ABOUT CONTENT
+==========================================*/
+
+.about-page h2 {
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-page p {
+    color: $text-muted;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/*==========================================
+    GLASS INFO CARDS
+==========================================*/
+
+.glass {
+    @include glass;
+    border-radius: 18px;
+    transition: $transition;
+    height: 100%;
+}
+
+.glass:hover {
+    transform: translateY(-8px);
+    box-shadow: $purple-glow;
+}
+
+.glass h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: $white;
+}
+
+.glass p {
+    margin-bottom: 0;
+    color: $text-light;
+}
+
+.glass i {
+    margin-right: 8px;
+}
+
+/*==========================================
+    SECTION TITLE
+==========================================*/
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: $fw-bold;
+    margin-bottom: 50px;
+}
+
+/*==========================================
+    EDUCATION CARD
+==========================================*/
+
+.education-card {
+    @include glass;
+    padding: 40px;
+    border-radius: 20px;
+    transition: $transition;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: $purple-glow;
+}
+
+.education-card h4 {
+    color: $white;
+    margin-bottom: 10px;
+}
+
+.education-card .college {
+    color: $primary;
+    font-weight: 600;
+}
+
+.education-card p {
+    color: $text-muted;
+}
+
+/*==========================================
+    STATS
+==========================================*/
+
+.stat-card {
+    @include glass;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 20px;
+    transition: $transition;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: $purple-glow-lg;
+}
+
+.stat-card h2 {
+    font-size: 3rem;
+    color: $primary;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    color: $text-light;
+    margin: 0;
+}
+
+/*==========================================
+    WHY HIRE ME
+==========================================*/
+
+.why-card {
+    @include card;
+    text-align: center;
+    padding: 40px 30px;
+    height: 100%;
+}
+
+.why-card i {
+    font-size: 3rem;
+    color: $primary;
+    margin-bottom: 25px;
+    transition: .4s;
+}
+
+.why-card h5 {
+    margin-bottom: 20px;
+}
+
+.why-card p {
+    color: $text-muted;
+    margin-bottom: 0;
+}
+
+.why-card:hover i {
+    transform: rotate(12deg) scale(1.15);
+}
+
+/*==========================================
+    FOOTER
+==========================================*/
+
+footer {
+    border-top: 1px solid rgba(255,255,255,.08);
+    margin-top: 80px;
+}
+
+footer p {
+    color: $text-muted;
+    margin: 0;
+}
+
+/*==========================================
+    RESPONSIVE
+==========================================*/
+
+@media (max-width:992px) {
+
+    .about-page {
+        text-align: center;
+    }
+
+    .about-page h2 {
+        margin-top: 40px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .education-card {
+        padding: 30px;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .about-page {
+        padding-top: 100px;
+    }
+
+    .stat-card h2 {
+        font-size: 2.4rem;
+    }
+
+    .why-card {
+        padding: 30px 20px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-page h2 {
+        font-size: 2rem;
+    }
+
+    .glass,
+    .education-card,
+    .stat-card,
+    .why-card {
+        padding: 25px;
+    }
+
+}
