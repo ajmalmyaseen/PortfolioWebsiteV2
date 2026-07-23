@@ -1420,94 +1420,127 @@ footer p {
   }
 }
 /*==========================================
-    PROJECTS PAGE
+    PROJECT PAGE
 ==========================================*/
 .project-page {
-  padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
+  padding: 120px 0 80px;
+  background: linear-gradient(180deg, #0F172A 0%, #111827 50%, #0F172A 100%);
 }
 
 .project-page::before {
   content: "";
   position: absolute;
-  width: 350px;
-  height: 350px;
-  background: rgba(139, 92, 246, 0.12);
+  width: 420px;
+  height: 420px;
+  right: -150px;
+  top: -150px;
   border-radius: 50%;
-  filter: blur(120px);
-  top: -120px;
-  right: -120px;
+  background: rgba(139, 92, 246, 0.15);
+  filter: blur(130px);
 }
 
 .project-page::after {
   content: "";
   position: absolute;
-  width: 280px;
-  height: 280px;
-  background: rgba(59, 130, 246, 0.12);
-  border-radius: 50%;
-  filter: blur(120px);
+  width: 350px;
+  height: 350px;
+  left: -100px;
   bottom: -120px;
-  left: -80px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.12);
+  filter: blur(130px);
+}
+
+/*==========================================
+    GITHUB SECTION
+==========================================*/
+.github-section {
+  padding: 90px 0;
+  background: #111827;
+}
+
+.github-section h2,
+.github-section h1 {
+  color: #fff;
+  font-weight: 700;
+}
+
+.github-section p {
+  color: #94A3B8;
 }
 
 /*==========================================
     PROJECT CARD
 ==========================================*/
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 22px;
-  overflow: hidden;
-  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  transition: 0.4s ease;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  transition: 0.35s ease;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 60px rgba(139, 92, 246, 0.55);
+  border-color: #8B5CF6;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+/* Accent Line */
+.project-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #38BDF8, #8B5CF6);
 }
 
 /*==========================================
-    PROJECT IMAGE
+    IMAGE
 ==========================================*/
 .project-card img {
   width: 100%;
-  height: 240px;
+  height: 230px;
   object-fit: cover;
-  transition: 0.5s;
+  transition: 0.6s;
 }
 
 .project-card:hover img {
   transform: scale(1.08);
+  filter: brightness(0.92);
 }
 
 /*==========================================
-    PROJECT CONTENT
+    CONTENT
 ==========================================*/
 .project-content {
-  padding: 30px;
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding: 30px;
 }
 
 .project-content h3 {
-  color: #ffffff;
-  margin-bottom: 15px;
+  color: #fff;
+  font-size: 1.45rem;
   font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .project-content p {
-  color: #94a3b8;
+  color: #94A3B8;
   line-height: 1.8;
-  margin-bottom: 25px;
   flex: 1;
+  margin-bottom: 25px;
 }
 
 /*==========================================
@@ -1521,17 +1554,19 @@ footer p {
 }
 
 .tech-stack span {
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #cbd5e1;
-  font-size: 0.85rem;
-  transition: 0.4s ease;
+  background: rgba(139, 92, 246, 0.12);
+  color: #C4B5FD;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  font-size: 0.82rem;
+  transition: 0.3s;
 }
 
 .tech-stack span:hover {
-  background: #8b5cf6;
-  color: white;
+  background: #8B5CF6;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /*==========================================
@@ -1539,62 +1574,146 @@ footer p {
 ==========================================*/
 .project-buttons {
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .project-buttons .btn {
-  border-radius: 50px;
+  border-radius: 12px;
   padding: 12px 24px;
-  transition: 0.4s ease;
   font-weight: 600;
+  transition: 0.3s;
 }
 
-.project-buttons .btn i {
-  margin-right: 8px;
+.project-buttons .btn-primary {
+  border: none;
+  background: linear-gradient(90deg, #8B5CF6, #7C3AED);
 }
 
-.project-buttons .btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.45);
+.project-buttons .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.45);
 }
 
-/*==========================================
-    PROJECT OVERLAY
-==========================================*/
-.project-card {
-  position: relative;
+.project-buttons .btn-outline-light {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent 40%);
-  pointer-events: none;
+.project-buttons .btn-outline-light:hover {
+  background: #fff;
+  color: #111827;
 }
 
 /*==========================================
-    FOOTER
+    LOADING
 ==========================================*/
-footer {
-  margin-top: 80px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+.loading-spinner {
+  display: none;
+  text-align: center;
+  padding: 70px 0;
 }
 
-footer p {
-  color: #94a3b8;
-  margin: 0;
+.loading-spinner.active {
+  display: block;
+}
+
+.loading-spinner .spinner-border {
+  width: 4rem;
+  height: 4rem;
+  color: #8B5CF6;
+}
+
+.loading-spinner p {
+  color: #94A3B8;
+  margin-top: 20px;
+}
+
+/*==========================================
+    ERROR
+==========================================*/
+.error-message {
+  display: none;
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  background: rgba(220, 53, 69, 0.12);
+  border: 1px solid rgba(220, 53, 69, 0.4);
+  color: #ffb4bd;
+}
+
+.error-message.active {
+  display: block;
+}
+
+/*==========================================
+    EMPTY STATE
+==========================================*/
+.empty-state {
+  display: none;
+  text-align: center;
+  padding: 80px 20px;
+  color: #94A3B8;
+}
+
+.empty-state.active {
+  display: block;
+}
+
+.empty-state i {
+  font-size: 70px;
+  color: #8B5CF6;
+  margin-bottom: 20px;
+}
+
+/*==========================================
+    GITHUB STATS
+==========================================*/
+.project-stats {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+  color: #94A3B8;
+  font-size: 0.9rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-item i {
+  color: #38BDF8;
+}
+
+.language-badge {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #7DD3FC;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  font-size: 0.8rem;
 }
 
 /*==========================================
     RESPONSIVE
 ==========================================*/
 @media (max-width: 992px) {
-  .project-page {
+  .project-buttons {
+    justify-content: center;
+  }
+  .project-content {
     text-align: center;
   }
-  .project-buttons {
+  .tech-stack {
+    justify-content: center;
+  }
+  .project-stats {
     justify-content: center;
   }
 }
@@ -1603,7 +1722,7 @@ footer p {
     padding-top: 100px;
   }
   .project-card img {
-    height: 220px;
+    height: 210px;
   }
   .project-content {
     padding: 25px;
@@ -1613,22 +1732,11 @@ footer p {
   .project-card img {
     height: 190px;
   }
-  .project-content {
-    padding: 20px;
-  }
-  .project-content h3 {
-    font-size: 1.4rem;
-  }
   .project-buttons {
     flex-direction: column;
   }
   .project-buttons .btn {
     width: 100%;
-    justify-content: center;
-    display: flex;
-  }
-  .tech-stack {
-    justify-content: center;
   }
 }
 /*==========================================
