@@ -20,6 +20,72 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .loading-spinner.active {
+            display: block;
+        }
+
+        .error-message {
+            display: none;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .error-message.active {
+            display: block;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .project-stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .language-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -77,7 +143,8 @@
     </nav>
 
     <!-- Hero -->
-
+     <br>
+     <br>
     <section class="project-page py-5">
 
         <div class="container">
@@ -92,7 +159,7 @@
                     Featured Projects
                 </h1>
 
-                <p class="hero-text">
+                <p class="hero-text" justify-content-center mt-3">
 
                     Here are some projects that showcase my skills in
                     HTML, CSS, JavaScript, Bootstrap and Java.
@@ -109,7 +176,7 @@
 
                     <div class="project-card">
 
-                        <img src="assets/images/portfolio.png"
+                        <img src="assets/projects/Portfolio_website/portfolio.png"
                              class="img-fluid"
                              alt="Portfolio">
 
@@ -119,8 +186,12 @@
 
                             <p>
 
-                                Personal responsive portfolio built using
-                                HTML5, SCSS, Bootstrap 5 and JavaScript.
+                                Assignment: Design a portfolio website<br>
+Objective: Develop a good looking portfolio website using Html5, Css3, Scss, Bootstrap5 and Javascript.  <br>
+1. Design a home page of portfolio website which containing hero banner, highlight and card list components<br>
+2. Design an about page<br>
+3. Design a contact page<br>
+4. Website should be responsive<br>
 
                             </p>
 
@@ -135,7 +206,7 @@
 
                             <div class="project-buttons mt-4">
 
-                                <a href="YOUR_GITHUB_LINK"
+                                <a href="https://github.com/ajmalmyaseen/PortfolioWebsiteV2/"
                                    target="_blank"
                                    class="btn btn-outline-light">
 
@@ -145,7 +216,7 @@
 
                                 </a>
 
-                                <a href="YOUR_LIVE_LINK"
+                                <a href="https://ajmalmyaseen.vercel.app/"
                                    target="_blank"
                                    class="btn btn-primary">
 
@@ -163,33 +234,99 @@
 
                 </div>
 
-                <!-- Weather App -->
+                <!-- Next.js CRUD Application -->
 
                 <div class="col-lg-6" data-aos="fade-up">
 
                     <div class="project-card">
 
-                        <img src="assets/images/weather.png"
+                        <img src="assets/projects/CRUD_Application/crud.png"
                              class="img-fluid"
-                             alt="Weather">
+                             alt="Next.js CRUD Application">
 
                         <div class="project-content">
 
-                            <h3>Weather App</h3>
+                            <h3>Next.js CRUD Application</h3>
 
                             <p>
 
-                                Real-time weather application using OpenWeather API
-                                and JavaScript.
+                                Develop a simple CRUD application using Next.js to perform Create, Read, Update, and Delete operations on a set of data. <br>
+1. Create a Next.js project<br>
+2. Design a page that list countries name and phone code sort name ( nd the below url to download the country data json) <br>
+3. The list country table must contain pagination search and sort option(Country Name  Asc/Desc)<br>
+4. Create a modal for add/edit and update the country name<br>
+5. Implement the delete function with con rmation<br>
+6. Download or copy the country json data and create a country json le in next js public folder read the json for listing the country<br>
+7. https://github.com/hiiamrohit/Countries-States-Cities-database/blob/master/countries.json<br>
+8. https://raw.githubusercontent.com/hiiamrohit/Countries-States-Cities-database/master/countries.json<br>
+
 
                             </p>
 
                             <div class="tech-stack">
 
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>API</span>
+                                <span>Next.js</span>
+                                <span>React</span>
+
+                            </div>
+
+                            <div class="project-buttons mt-4">
+
+                                <a href="#" class="btn btn-outline-light">
+
+                                    <i class="fab fa-github"></i>
+
+                                    GitHub
+
+                                </a>
+
+                                <a href="#" class="btn btn-primary">
+
+                                    <i class="bi bi-box-arrow-up-right"></i>
+
+                                    Live Demo
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Next.js Login and Registration System -->
+
+                <div class="col-lg-6" data-aos="fade-up">
+
+                    <div class="project-card">
+
+                        <img src="assets/projects/Registration_System/regist.png"
+                             class="img-fluid"
+                             alt="Next.js Login and Registration System">
+
+                        <div class="project-content">
+
+                            <h3>Next.js Login and Registration System</h3>
+
+                            <p>
+
+                                 Develop a Next.js application with user authentication functionalities including registration, login, session management, and protected routes.<br>
+1. Create a Next.js project<br>
+2. Design a good looking landing page <br>
+3. Create a registration form with elds for username, email, password, etc.<br>
+4. Implement functionality to register new users and store their information in the json file<br>
+5. Design a login form with elds for email/username and password.<br>
+6. Implement user authentication by verifying credentials against the data.<br>
+7. Create protected routes that are accessible only by authenticated users.<br>
+8. Implement a logout mechanism to clear the user's data<br>
+
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>Next.js</span>
 
                             </div>
 
@@ -225,7 +362,7 @@
 
                     <div class="project-card">
 
-                        <img src="assets/images/calculator.png"
+                        <img src="assets/projects/Calculator/cal.png"
                              class="img-fluid"
                              alt="Calculator">
 
@@ -235,22 +372,28 @@
 
                             <p>
 
-                                Responsive calculator built using JavaScript
-                                with modern UI.
-
+                                Developed a menu-driven Java console calculator that performs 
+                                addition, subtraction, multiplication, division, modulus, exponentiation, and multiple basic operations.<br>
+                                 Implemented modular programming, input validation, exception handling, formatted output, and continuous calculations to ensure a user-friendly
+                                  and robust command-line experience.<br>
                             </p>
 
                             <div class="tech-stack">
 
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+                                <span>Java</span>
+                                <span>Scanner</span>
+                                <span>Exception Handling</span>
+                                <span>Loops</span>
+                                <span>Switch Statements</span>
+                                <span>Methods</span>
+                                <span>Input Validation</span>
+                                <span>Console Application</span>
 
                             </div>
 
                             <div class="project-buttons mt-4">
 
-                                <a href="#" class="btn btn-outline-light">
+                                <a href="https://github.com/ajmalmyaseen/LETS-UPGRADE-JAVA-PROJECT" class="btn btn-outline-light">
 
                                     <i class="fab fa-github"></i>
 
@@ -258,7 +401,7 @@
 
                                 </a>
 
-                                <a href="#" class="btn btn-primary">
+                                <a href="assets/projects/Calculator/cal_demo.png" class="btn btn-primary">
 
                                     <i class="bi bi-box-arrow-up-right"></i>
 
@@ -274,66 +417,53 @@
 
                 </div>
 
-                <!-- Todo -->
-
-                <div class="col-lg-6" data-aos="fade-up">
-
-                    <div class="project-card">
-
-                        <img src="assets/images/todo.png"
-                             class="img-fluid"
-                             alt="Todo">
-
-                        <div class="project-content">
-
-                            <h3>To-Do List</h3>
-
-                            <p>
-
-                                Task management web application using
-                                HTML, CSS and JavaScript.
-
-                            </p>
-
-                            <div class="tech-stack">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-
-                            </div>
-
-                            <div class="project-buttons mt-4">
-
-                                <a href="#" class="btn btn-outline-light">
-
-                                    <i class="fab fa-github"></i>
-
-                                    GitHub
-
-                                </a>
-
-                                <a href="#" class="btn btn-primary">
-
-                                    <i class="bi bi-box-arrow-up-right"></i>
-
-                                    Live Demo
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                
 
             </div>
 
         </div>
 
     </section>
+
+     <!-- Hero Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="display-5 fw-bold mb-3">My Projects</h1>
+                <p class="lead text-muted">Explore my latest work and contributions on GitHub</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section --->
+
+    <section class="py-5">
+        <div class="container">
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="loading-spinner active">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Loading repositories...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message"></div>
+
+            <!-- Projects Grid -->
+            <div id="projectsContainer" class="row g-4">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state">
+                <p>No repositories found.</p>
+            </div>
+
+        </div>
+    </section>
+
 
     <!-- Footer -->
      
@@ -406,6 +536,16 @@
     </div>
 
 </footer>
+
+    
+    <!-- GitHub Projects Script -->
+
+    <script>
+        // Fetch and display GitHub repositories on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchGitHubRepos('ajmalmyaseen');
+        });
+    </script>
 
 
     <!-- Bootstrap -->
