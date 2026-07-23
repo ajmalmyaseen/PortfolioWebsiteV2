@@ -20,6 +20,8 @@
 @import "certificate";
 @import "projects";
 @import "theme";
+@import "skills";
+@import "footer";
 
 /* ==========================
         GLOBAL RESET
@@ -347,91 +349,8 @@ body::after{
 
 }
 
-.footer{
 
-    margin-top:100px;
-    padding:60px 0 25px;
 
-    @include glass;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-}
-
-.footer-logo{
-
-    font-size:2rem;
-    font-weight:700;
-    text-decoration:none;
-
-}
-
-.footer h5{
-
-    color:$white;
-    margin-bottom:20px;
-
-}
-
-.footer-links{
-
-    list-style:none;
-    padding:0;
-
-}
-
-.footer-links li{
-
-    margin-bottom:12px;
-
-}
-
-.footer-links a{
-
-    color:$text-muted;
-    text-decoration:none;
-    transition:$transition;
-
-}
-
-.footer-links a:hover{
-
-    color:$primary;
-    padding-left:8px;
-
-}
-
-.footer-social{
-
-    display:flex;
-    gap:15px;
-
-}
-
-.footer-social a{
-
-    width:45px;
-    height:45px;
-
-    border-radius:50%;
-
-    @include flex-center;
-
-    background:rgba(255,255,255,.06);
-
-    color:white;
-
-    transition:$transition;
-
-}
-
-.footer-social a:hover{
-
-    background:$primary;
-
-    transform:translateY(-5px);
-
-}
 
 .btn{
 
@@ -526,121 +445,4 @@ img{
 
     animation:floating 4s ease-in-out infinite;
 
-}
-
-@media(max-width:576px){
-
-.hero-title{
-
-font-size:2rem;
-
-}
-
-.display-4{
-
-font-size:2rem;
-
-}
-
-.btn{
-
-width:100%;
-
-margin-bottom:15px;
-
-}
-
-.hero-buttons{
-
-display:flex;
-flex-direction:column;
-
-}
-
-}
-
-@media(max-width:992px){
-
-.navbar-nav{
-
-text-align:center;
-
-}
-
-.hero{
-
-text-align:center;
-
-}
-
-.hero-image{
-
-margin-top:40px;
-
-}
-
-}
-
-@media(min-width:1400px){
-
-.container{
-
-max-width:1320px;
-
-}
-
-}
-
-.code-card {
-
-    @include glass;
-
-    border-radius: 20px;
-
-    padding: 25px;
-
-    font-family: "Fira Code", monospace;
-
-    box-shadow: $purple-glow;
-
-    overflow-x: auto;
-
-    animation: floating 4s ease-in-out infinite;
-}
-
-.code-card pre {
-
-    margin: 0;
-
-    white-space: pre-wrap;
-
-    color: $white;
-
-    line-height: 1.8;
-}
-
-.keyword {
-
-    color: #C792EA;
-    font-weight: 600;
-}
-
-.variable {
-
-    color: #82AAFF;
-}
-
-.property {
-
-    color: #89DDFF;
-}
-
-.string {
-
-    color: #C3E88D;
-}
-
-.boolean {
-
-    color: #FFCB6B;
 }

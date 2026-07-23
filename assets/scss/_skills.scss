@@ -1,0 +1,222 @@
+/*==========================================
+    SKILLS PAGE
+==========================================*/
+
+.skills-page {
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-page::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(139, 92, 246, .12);
+    border-radius: 50%;
+    filter: blur(120px);
+    top: -120px;
+    right: -100px;
+}
+
+.skills-page::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: rgba(59, 130, 246, .12);
+    border-radius: 50%;
+    filter: blur(120px);
+    bottom: -120px;
+    left: -80px;
+}
+
+/*==========================================
+    SKILL CARD
+==========================================*/
+
+.skill-card {
+
+    @include glass;
+
+    padding: 35px 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: $transition;
+
+    height: 100%;
+}
+
+.skill-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: $purple-glow-lg;
+}
+
+.skill-icon {
+
+    font-size: 3.5rem;
+
+    margin-bottom: 20px;
+
+    transition: .4s;
+}
+
+.skill-card:hover .skill-icon {
+
+    transform: scale(1.15) rotate(8deg);
+}
+
+.skill-card h4 {
+
+    color: $white;
+
+    margin-bottom: 20px;
+
+    font-weight: $fw-bold;
+}
+
+/*==========================================
+    PROGRESS BAR
+==========================================*/
+
+.progress {
+
+    height: 12px;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,.08);
+}
+
+.progress-bar {
+
+    font-size: .7rem;
+
+    font-weight: 600;
+
+    border-radius: 50px;
+
+    transition: width 1.5s ease;
+}
+
+/*==========================================
+    TOOLS SECTION
+==========================================*/
+
+.tool-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.tool-list span {
+
+    @include glass;
+
+    padding: 12px 22px;
+
+    border-radius: 50px;
+
+    color: $text-light;
+
+    transition: $transition;
+
+    font-size: .95rem;
+
+    font-weight: 500;
+}
+
+.tool-list span:hover {
+
+    background: $primary;
+
+    color: white;
+
+    transform: translateY(-5px);
+
+    box-shadow: $purple-glow;
+}
+
+/*==========================================
+    SECTION TITLE
+==========================================*/
+
+.skills-page h2 {
+
+    color: $white;
+
+    font-weight: $fw-bold;
+}
+
+/*==========================================
+    RESPONSIVE
+==========================================*/
+
+@media (max-width:992px){
+
+    .skills-page{
+
+        text-align:center;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .skills-page{
+
+        padding-top:100px;
+    }
+
+    .skill-card{
+
+        padding:30px 25px;
+    }
+
+    .skill-icon{
+
+        font-size:3rem;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .skill-card{
+
+        padding:25px 20px;
+    }
+
+    .skill-icon{
+
+        font-size:2.7rem;
+    }
+
+    .tool-list{
+
+        gap:10px;
+    }
+
+    .tool-list span{
+
+        padding:10px 18px;
+
+        font-size:.85rem;
+    }
+
+}
