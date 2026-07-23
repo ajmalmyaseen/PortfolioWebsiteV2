@@ -135,3 +135,54 @@ AOS.init({
     easing:"ease-in-out"
 
 });
+
+// ================= EMAILJS =================
+
+// Initialize EmailJS
+
+if (typeof emailjs !== "undefined") {
+
+emailjs.init({
+    publicKey: "ZgwLYAD2ObpsK-Hp3"
+});
+
+const form = document.getElementById("contact-form");
+
+if (form) {
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const button = form.querySelector("button");
+
+        button.disabled = true;
+        button.innerHTML = "Sending...";
+
+        emailjs.sendForm(
+            "service_31oo3qd",
+            "template_9zk2z97",
+            this
+        ).then(() => {
+
+            alert("Message sent successfully!");
+
+            form.reset();
+
+            button.disabled = false;
+            button.innerHTML = "Send Message";
+
+        }).catch((error) => {
+
+            console.error(error);
+
+            alert("Failed to send message.");
+
+            button.disabled = false;
+            button.innerHTML = "Send Message";
+        });
+
+    });
+}
+}
+
+//=========================
