@@ -5,6 +5,22 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /*=========================
+        WHATSAPP CONTACT
+    =========================*/
+
+    const whatsappButton = document.createElement("a");
+    whatsappButton.className = "whatsapp-float";
+    whatsappButton.href = "https://wa.me/918086210987?text=Hi%2C%20contacting%20from%20your%20portfolio%20website";
+    whatsappButton.target = "_blank";
+    whatsappButton.rel = "noopener noreferrer";
+    whatsappButton.setAttribute("aria-label", "Chat with Ajmal on WhatsApp");
+    whatsappButton.innerHTML = `
+        <span class="whatsapp-float__label" aria-hidden="true">Chat on WhatsApp</span>
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    `;
+    document.body.appendChild(whatsappButton);
+
+    /*=========================
         STICKY NAVBAR
     =========================*/
 

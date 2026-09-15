@@ -444,3 +444,102 @@ img{
     animation:floating 4s ease-in-out infinite;
 
 }
+
+/* ==========================
+        WHATSAPP FLOAT
+========================== */
+
+.whatsapp-float{
+
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    z-index:1050;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    min-width:58px;
+    height:58px;
+    padding:5px;
+    color:#fff;
+    background:#25d366;
+    border:2px solid #86efac;
+    border-radius:999px;
+    box-shadow:0 0 0 5px rgba(37,211,102,.18), 0 12px 28px rgba(37,211,102,.35);
+    overflow:hidden;
+    transition:width .3s ease, transform .3s ease, box-shadow .3s ease;
+
+    i{
+
+        display:grid;
+        flex:0 0 44px;
+        width:44px;
+        height:44px;
+        place-items:center;
+        font-size:1.9rem;
+
+    }
+
+    &:hover,
+    &:focus-visible{
+
+        width:210px;
+        color:#fff;
+        transform:translateY(-5px);
+        box-shadow:0 0 0 7px rgba(37,211,102,.24), 0 16px 35px rgba(37,211,102,.45);
+
+    }
+
+    &:focus-visible{
+
+        outline:3px solid #fff;
+        outline-offset:3px;
+
+    }
+
+}
+
+.whatsapp-float__label{
+
+    width:0;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size:.82rem;
+    font-weight:700;
+    opacity:0;
+    transition:width .25s ease, opacity .2s ease;
+
+    .whatsapp-float:hover &,
+    .whatsapp-float:focus-visible &{
+
+        width:130px;
+        opacity:1;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .whatsapp-float{
+
+        right:16px;
+        bottom:16px;
+
+        &:hover,
+        &:focus-visible{
+
+            width:58px;
+            transform:translateY(-4px);
+
+        }
+
+    }
+
+    .whatsapp-float__label{
+
+        display:none;
+
+    }
+
+}
