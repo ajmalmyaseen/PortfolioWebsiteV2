@@ -37,11 +37,74 @@
     <link rel="icon"
       href="assets/images/favicon.png">
 
+    <style>
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .loading-spinner.active {
+            display: block;
+        }
+
+        .error-message {
+            display: none;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .error-message.active {
+            display: block;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .project-stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .language-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+    </style>
+
 </head>
 
-<body>
-
-    <!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
 
     <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
 
@@ -61,27 +124,27 @@
                 <ul class="navbar-nav mx-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="#hero">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="skills.html">Skills</a>
+                        <a class="nav-link" href="#skills">Skills</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="certificates.html">Certificates</a>
+                        <a class="nav-link" href="#certificates">Certificates</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
 
                 </ul>
@@ -106,9 +169,15 @@
 
     </nav>
 
+<body>
+
+    
+
     <!-- ================= HERO ================= -->
 
-    <section class="hero-section">
+    <hr>
+
+    <section id="hero" class="hero-section">
 
         <div class="container">
 
@@ -218,6 +287,8 @@
     </section>
 
     <!-- ================= TECHNOLOGIES ================= -->
+
+     <hr>
 
     <section class="py-5 technologies">
 
@@ -339,6 +410,1291 @@
 
     </section>
 
+    <!-- ================= ABOUT ================= -->
+     <hr>
+
+    <section id="about" class="about-page py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- Image -->
+
+                <div class="col-lg-5 text-center" data-aos="fade-right">
+
+                    <img src="assets/images/AJMAL.jpg"
+                        class="img-fluid rounded-circle hero-image"
+                        alt="Ajmal Mohamed Yaseen">
+
+                </div>
+
+                <!-- Content -->
+
+                <div class="col-lg-7" data-aos="fade-left">
+
+                    <span class="hero-badge">
+                        About Me
+                    </span>
+
+                    <h2 class="display-5 fw-bold mt-3">
+                        Passionate Frontend Developer &
+                        <span class="text-primary">
+                            React Learner
+                        </span>
+                    </h2>
+
+                    <p class="hero-text mt-4">
+
+                        Hello! I'm <strong>Ajmal Mohamed Yaseen</strong>,
+                        an aspiring Full Stack Developer passionate about
+                        creating responsive, modern and user-friendly web
+                        applications.
+
+                    </p>
+
+                    <p class="hero-text">
+
+                        I enjoy turning ideas into beautiful digital experiences
+                        using HTML5, CSS3, JavaScript, Bootstrap, React and Java.
+                        I continuously improve my skills by building real-world
+                        projects and learning new technologies.
+
+                    </p>
+
+                    <div class="row mt-5">
+
+                        <div class="col-md-6 mb-3">
+
+                            <div class="glass p-4">
+
+                                <h5>
+                                    <i class="bi bi-person-fill text-primary"></i>
+                                    Name
+                                </h5>
+
+                                <p class="mb-0">
+                                    Ajmal Mohamed Yaseen
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <div class="glass p-4">
+
+                                <h5>
+                                    <i class="bi bi-envelope-fill text-primary"></i>
+                                    Email
+                                </h5>
+
+                                <p class="mb-0">
+                                    <a href="mailto:ajmalmyaseen@gmail.com">
+                                        ajmalmyaseen@gmail.com
+                                    </a>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <div class="glass p-4">
+
+                                <h5>
+                                    <i class="bi bi-geo-alt-fill text-primary"></i>
+                                    Location
+                                </h5>
+
+                                <p class="mb-0">
+                                    Chettuva, Orumanayoor, Kerala, India
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <div class="glass p-4">
+
+                                <h5>
+                                    <i class="bi bi-code-slash text-primary"></i>
+                                    Experience
+                                </h5>
+
+                                <p class="mb-0">
+                                    Fresher
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section class="education-card">
+
+        <div class="container">
+
+            <h2 class="section-title text-center mb-5">
+                Education
+            </h2>
+
+            <div class="glass p-5" data-aos="fade-up">
+
+                <h4>Bachelor of Technology (B.Tech)</h4>
+
+                <h6>   
+                    NEFTU - North East Frontier Technical University - Computer Science
+                </h6>
+
+                <p>
+
+                    Waiting for final results.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section class="education-card">
+
+        <div class="container">
+
+            <h2 class="section-title text-center mb-5">
+                Experience
+            </h2>
+
+            <div class="glass p-5" data-aos="fade-up">
+
+                <h4>Python Full Stack Intern</h4>
+
+                <h6>   
+                      Inmakes Infotech Pvt. Ltd.
+                </h6>
+
+                <p>
+
+                    From 27/09/2022 to 26/11/2022
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= STATS ================= -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="row text-center">
+
+                <div class="col-md-3 mb-4">
+
+                    <div class="glass p-4">
+
+                        <h2 class="text-primary">5+</h2>
+
+                        <p>Projects</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 mb-4">
+
+                    <div class="glass p-4">
+
+                        <h2 class="text-primary">8+</h2>
+
+                        <p>Technologies</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 mb-4">
+
+                    <div class="glass p-4">
+
+                        <h2 class="text-primary">2</h2>
+
+                        <p>Certificates</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 mb-4">
+
+                    <div class="glass p-4">
+
+                        <h2 class="text-primary">100%</h2>
+
+                        <p>Dedication</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WHY HIRE ME ================= -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <h2 class="section-title text-center mb-5">
+
+                Why Hire Me?
+
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="tech-card p-4">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        <h5 class="mt-3">
+                            Clean Code
+                        </h5>
+
+                        <p>
+                            I build maintainable and responsive websites using modern development practices.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="tech-card p-4">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        <h5 class="mt-3">
+                            Quick Learner
+                        </h5>
+
+                        <p>
+                            I adapt quickly to new technologies and continuously improve my skills.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="tech-card p-4">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <h5 class="mt-3">
+                            Team Player
+                        </h5>
+
+                        <p>
+                            I enjoy collaborating with others to create efficient and user-friendly applications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ <!-- ================= PROJECTS ================= -->
+
+ <!-- Hero -->
+
+  <hr>
+     
+    <section id="projects" class="project-page py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5" data-aos="fade-up">
+
+                <span class="hero-badge">
+                    My Work
+                </span>
+
+                <h1 class="display-4 fw-bold mt-3">
+                    Featured Projects
+                </h1>
+
+                <p class="hero-text mt-3 mx-auto">
+
+                    Here are some projects that showcase my skills in
+                    HTML, CSS, JavaScript, Bootstrap and Java.
+
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Portfolio -->
+
+                <div class="col-lg-6" data-aos="fade-up">
+
+                    <div class="project-card">
+
+                        <img src="assets/projects/Portfolio_website/portfolio.png"
+                             class="img-fluid"
+                             alt="Portfolio">
+
+                        <div class="project-content">
+
+                            <h3>Portfolio Website</h3>
+
+                            <p>
+
+                                Assignment: Design a portfolio website<br>
+                                Objective: Develop a good looking portfolio website using Html5, Css3, Scss, Bootstrap5 and Javascript.  <br>
+                                1. Design a home page of portfolio website which containing hero banner, highlight and card list components<br>
+                                2. Design an about page<br>
+                                3. Design a contact page<br>
+                                4. Website should be responsive<br>
+
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>HTML5</span>
+                                <span>SCSS</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <div class="project-buttons mt-4">
+
+                                <a href="https://github.com/ajmalmyaseen/PortfolioWebsiteV2/"
+                                   target="_blank"
+                                   class="btn btn-outline-light">
+
+                                    <i class="fab fa-github"></i>
+
+                                    GitHub
+
+                                </a>
+
+                                <a href="https://ajmalmyaseen.vercel.app/"
+                                   target="_blank"
+                                   class="btn btn-primary">
+
+                                    <i class="bi bi-box-arrow-up-right"></i>
+
+                                    Live Demo
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Next.js CRUD Application -->
+
+                <div class="col-lg-6" data-aos="fade-up">
+
+                    <div class="project-card">
+
+                        <img src="assets/projects/CRUD_Application/crud2.jpeg"
+                             class="img-fluid"
+                             alt="Next.js CRUD Application">
+
+                        <div class="project-content">
+
+                            <h3>Next.js CRUD Application</h3>
+
+                            <p>
+
+                                Develop a simple CRUD application using Next.js to perform Create, Read, Update, and Delete operations on a set of data. <br>
+                                1. Create a Next.js project<br>
+                                2. Design a page that list countries name and phone code sort name ( nd the below url to download the country data json) <br>
+                                3. The list country table must contain pagination search and sort option(Country Name  Asc/Desc)<br>
+                                4. Create a modal for add/edit and update the country name<br>
+                                5. Implement the delete function with con rmation<br>
+                                6. Download or copy the country json data and create a country json le in next js public folder read the json for listing the country<br>
+                                7. https://github.com/hiiamrohit/Countries-States-Cities-database/blob/master/countries.json<br>
+                                8. https://raw.githubusercontent.com/hiiamrohit/Countries-States-Cities-database/master/countries.json<br>
+
+
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>Next.js</span>
+                                <span>React</span>
+
+                            </div>
+
+                            <div class="project-buttons mt-4">
+
+                                <a href="https://github.com/ajmalmyaseen/country-crud" class="btn btn-outline-light">
+
+                                    <i class="fab fa-github"></i>
+
+                                    GitHub
+
+                                </a>
+
+                                <a href="https://country-crud.vercel.app/" class="btn btn-primary">
+
+                                    <i class="bi bi-box-arrow-up-right"></i>
+
+                                    Live Demo
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Next.js Login and Registration System -->
+
+                <div class="col-lg-6" data-aos="fade-up">
+
+                    <div class="project-card">
+
+                        <img src="assets/projects/Registration_System/regist.png"
+                             class="img-fluid"
+                             alt="Next.js Login and Registration System">
+
+                        <div class="project-content">
+
+                            <h3>Next.js Login and Registration System</h3>
+
+                            <p>
+
+                                 Develop a Next.js application with user authentication functionalities including registration, login, session management, and protected routes.<br>
+                                1. Create a Next.js project<br>
+                                2. Design a good looking landing page <br>
+                                3. Create a registration form with elds for username, email, password, etc.<br>
+                                4. Implement functionality to register new users and store their information in the json file<br>
+                                5. Design a login form with elds for email/username and password.<br>
+                                6. Implement user authentication by verifying credentials against the data.<br>
+                                7. Create protected routes that are accessible only by authenticated users.<br>
+                                8. Implement a logout mechanism to clear the user's data<br>
+
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>Next.js</span>
+
+                            </div>
+
+                            <div class="project-buttons mt-4">
+
+                                <a href="#" class="btn btn-outline-light">
+
+                                    <i class="fab fa-github"></i>
+
+                                    GitHub
+
+                                </a>
+
+                                <a href="#" class="btn btn-primary">
+
+                                    <i class="bi bi-box-arrow-up-right"></i>
+
+                                    Live Demo
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Calculator -->
+
+                <div class="col-lg-6" data-aos="fade-up">
+
+                    <div class="project-card">
+
+                        <img src="assets/projects/Calculator/cal.png"
+                             class="img-fluid"
+                             alt="Calculator">
+
+                        <div class="project-content">
+
+                            <h3>Calculator</h3>
+
+                            <p>
+
+                                Developed a menu-driven Java console calculator that performs 
+                                addition, subtraction, multiplication, division, modulus, exponentiation, and multiple basic operations.<br>
+                                 Implemented modular programming, input validation, exception handling, formatted output, and continuous calculations to ensure a user-friendly
+                                  and robust command-line experience.<br>
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>Java</span>
+                                <span>Scanner</span>
+                                <span>Exception Handling</span>
+                                <span>Loops</span>
+                                <span>Switch Statements</span>
+                                <span>Methods</span>
+                                <span>Input Validation</span>
+                                <span>Console Application</span>
+
+                            </div>
+
+                            <div class="project-buttons mt-4">
+
+                                <a href="https://github.com/ajmalmyaseen/Calculator" class="btn btn-outline-light">
+
+                                    <i class="fab fa-github"></i>
+
+                                    GitHub
+
+                                </a>
+
+                                <a href="assets/projects/Calculator/cal_demo.png" class="btn btn-primary">
+
+                                    <i class="bi bi-box-arrow-up-right"></i>
+
+                                    Live Demo
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+     <!-- Hero Section -->
+
+    <section class="github py-5">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="display-5 fw-bold mb-3">GitHub Repositories</h1>
+                <p>Explore my latest work and contributions on GitHub</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section --->
+
+    <section class="github-projects py-5">
+        <div class="container">
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="loading-spinner active">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Loading repositories...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message"></div>
+
+            <!-- Projects Grid -->
+            <div id="projectsContainer" class="row g-4">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state">
+                <p>No repositories found.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+     <!-- ================= SKILLS ================= -->
+
+    <!-- Hero -->
+
+    <hr>
+
+    <section id="skills" class="skills-page">
+
+        <div class="container">
+
+            <div class="text-center mb-5" data-aos="fade-up">
+
+                <span class="hero-badge">My Skills</span>
+
+                <h1 class="display-4 fw-bold mt-3">
+                    Technical Skills
+                </h1>
+
+                <p class="hero-text mt-3 mx-auto">
+                    Technologies and tools I use to build responsive,
+                    modern and user-friendly web applications.
+                </p>
+
+            </div>
+
+            <br><br><br>
+
+            <!-- Programming Languages -->
+
+            <div class="row g-4">
+
+                <h4 class="fw-bold mt-3 mx-auto text-center" data-aos="fade-up">
+                    Programming Languages
+                </h4>
+
+                <!-- Python -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-python skill-icon text-danger"></i>
+
+                        <h4>Python</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- C -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="devicon-c-plain skill-icon"></i>
+
+                        <h4>C</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- MySQL -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="devicon-mysql-plain skill-icon"></i>
+
+                        <h4>MySQL</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- Java -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-java skill-icon text-warning"></i>
+
+                        <h4>Java</h4>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br><br><br>
+
+            <!-- Frontend Development Skills -->
+
+            <div class="row g-4">
+
+                <h4 class="fw-bold mt-3 mx-auto text-center" data-aos="fade-up">
+                    Frontend Development Skills
+                </h4>
+
+                <!-- HTML -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-html5 skill-icon text-danger"></i>
+
+                        <h4>HTML5</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- CSS -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-css3-alt skill-icon text-primary"></i>
+
+                        <h4>CSS3</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- Bootstrap -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-bootstrap skill-icon text-purple"></i>
+
+                        <h4>Bootstrap 5</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- JavaScript -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-js-square skill-icon text-warning"></i>
+
+                        <h4>JavaScript</h4>
+
+
+                    </div>
+
+                </div>
+
+                <!-- React -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-react skill-icon text-info"></i>
+
+                        <h4>React</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- SCSS -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-sass skill-icon text-light"></i>
+
+                        <h4>SCSS</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br><br><br>
+
+            <!-- Tools -->
+
+            <div class="row g-4">
+
+                <h4 class="fw-bold mt-3 mx-auto text-center" data-aos="fade-up">
+                    Tools
+                </h4>
+
+                <!-- Git -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-git skill-icon text-danger"></i>
+
+                        <h4>Git</h4>
+
+                    </div>
+
+                </div>
+
+                 <!-- GitHub -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-github skill-icon text-danger"></i>
+
+                        <h4>GitHub</h4>
+
+                    </div>
+
+                </div>
+
+                 <!-- VS Code -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-vscode skill-icon text-danger"></i>
+
+                        <h4>VS Code</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br><br><br>
+
+            <!-- Currently Learning -->
+
+            <div class="row g-4">
+
+                <h4 class="fw-bold mt-3 mx-auto text-center" data-aos="fade-up">
+                    Currently Learning
+                </h4>
+
+                <!-- React -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-react skill-icon text-info"></i>
+
+                        <h4>React</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- Node.js -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-node-js skill-icon text-info"></i>
+
+                        <h4>Node.js</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- Express.js -->
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-express skill-icon text-info"></i>
+
+                        <h4>Express.js</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CERTIFICATES ================= -->
+
+    <hr>
+
+    <section id="certificates" class="certificate-page py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5" data-aos="fade-up">
+
+                <span class="hero-badge">
+                    My Achievements
+                </span>
+
+                <h1 class="display-4 fw-bold mt-3">
+                    Certificates
+                </h1>
+
+                <p class="hero-text mt-3 mx-auto">
+
+                    Certifications that demonstrate my technical knowledge
+                    and continuous learning journey.
+
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Java -->
+
+                <div class="col-lg-6" data-aos="fade-right">
+
+                    <div class="certificate-card">
+
+                        <img src="assets/certificates/java-certificate.jpeg"
+                            class="img-fluid"
+                            alt="Java Certificate">
+
+                        <div class="certificate-content">
+
+                            <span class="badge bg-primary mb-3">
+                                Java
+                            </span>
+
+                            <h3>Java Programming</h3>
+
+                            <p>
+
+                                Successfully completed Java Programming
+                                bootcamp<br> covering OOP, Collections,
+                                JDBC and Core Java concepts.<br>
+
+                            </p>
+
+                            <a href="assets/certificates/java-certificate.pdf"
+                                target="_blank"
+                                class="btn btn-primary">
+
+                                <i class="bi bi-eye-fill"></i>
+
+                                View Certificate
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Python -->
+
+                <div class="col-lg-6" data-aos="fade-left">
+
+                    <div class="certificate-card">
+
+                        <img src="assets/certificates/python-certificate.jpeg"
+                            class="img-fluid"
+                            alt="Python Certificate">
+
+                        <div class="certificate-content">
+
+                            <span class="badge bg-success mb-3">
+                                Python
+                            </span>
+
+                            <h3>Python Programming</h3>
+
+                            <p>
+
+                                Completed Python internship certificate.<br>
+                                covering fundamentals, OOP, file handling and problem solving.<br>
+
+                            </p>
+
+                            <a href="assets/certificates/python-certificate.pdf"
+                                target="_blank"
+                                class="btn btn-primary">
+
+                                <i class="bi bi-eye-fill"></i>
+
+                                View Certificate
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--================ CONTACT ================-->
+
+    <hr>
+
+    <section id="contact" class="contact-page py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5" data-aos="fade-up">
+
+                <span class="hero-badge">Get In Touch</span>
+
+                <h1 class="display-4 fw-bold mt-3">
+                    Let's Work Together
+                </h1>
+
+                <p class="hero-text mx-auto">
+
+                    I'm always interested in internship opportunities,
+                    freelance projects, and collaborations.
+
+                </p>
+
+            </div>
+
+            <div class="row g-5">
+
+                <!-- Contact Info -->
+
+                <div class="col-lg-5" data-aos="fade-right">
+
+                    <div class="contact-info">
+
+                        <h4 class="mb-4">
+                            Contact Information
+                        </h4>
+
+                        <div class="d-flex mb-4">
+
+                            <i class="bi bi-envelope-fill fs-2 text-primary me-3"></i>
+
+                            <div>
+
+                                <h6>Email</h6>
+
+                                <a href="mailto:ajmalmyaseen@gmail.com" class="me-2">
+                                    ajmalmyaseen@gmail.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex mb-4">
+
+                            <i class="bi bi-phone-fill fs-2 text-primary me-3"></i>
+
+                            <div>
+
+                                <h6>Phone</h6>
+
+                                <a href="tel:+918086210987">
+                                    +91 8086210987
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex">
+
+                            <i class="bi bi-geo-alt-fill fs-2 text-primary me-3"></i>
+
+                            <div>
+
+                                <h6>Location</h6>
+
+                                <p class="mb-0">
+                                    Chettuva, Orumanayoor, Kerala, India
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Social -->
+
+                    <div class="contact-social">
+
+                        <h5 class="mb-3">
+                            Connect With Me
+                        </h5>
+
+                        <div class="footer-social">
+
+                    <a href="https://github.com/ajmalmyaseen/"><i class="fab fa-github"></i></a>
+
+                    <a href="https://www.linkedin.com/in/ajmal-mohamed-yaseen/"><i class="fab fa-linkedin"></i></a>
+
+                    <a href="https://www.instagram.com/aju_m.y/?hl=en/"><i class="fab fa-instagram"></i></a>
+
+                    <a href="mailto:ajmalmyaseen@gmail.com"><i class="fas fa-envelope"></i></a>
+
+                </div>
+
+            </div>
+
+                </div>
+
+                <!-- Contact Form -->
+
+                <div class="col-lg-7" data-aos="fade-left">
+
+                    <form id="contact-form" class="contact-form">
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-4">
+                                  <label for="from_name" class="form-label">Name</label>
+                                <input id="from_name"
+                                name="from_name"
+                                type="text"
+                                class="form-control"
+                                autocomplete="name"
+                                required>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                            <label for="reply_to" class="form-label">Email</label>
+                                <input id="reply_to"
+                                name="reply_to"
+                                type="email"
+                                class="form-control"
+                                autocomplete="email"
+                                required
+>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input
+                                id="subject"
+                                name="subject"
+                                type="text"
+                                class="form-control"
+                                required
+                            >
+
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label for="message" class="form-label">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                class="form-control"
+                                rows="5"
+                                required>
+                            </textarea>
+
+                        </div>
+
+                        <button id="send-button" type="submit" class="btn btn-primary px-5">
+
+                            <i class="bi bi-send-fill me-2"></i>
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Google Map -->
+
+            <div class="map-container" data-aos="fade-up">
+
+                <h2>My Home Location</h2>
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d62757.03682939052!2d75.99869728088376!3d10.554520324593176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDMzJzE2LjMiTiA3NsKwMDInMjMuNiJF!5e0!3m2!1sen!2sin!4v1784793746581!5m2!1sen!2sin" 
+                    width="100%"
+                    height="350"
+                    style="border:0;border-radius:15px;"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <!-- ================= FOOTER ================= -->
 
     <footer class="footer">
@@ -367,12 +1723,12 @@
 
                 <ul class="footer-links">
 
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#skills">Skills</a></li>
 
                 </ul>
 
@@ -411,6 +1767,49 @@
     </div>
 
 </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+    const SERVICE_ID = "service_31oo3qd";
+    const TEMPLATE_ID = "template_9zk2z97";
+    const PUBLIC_KEY = "ZgwLYAD2ObpsK-Hp3";
+
+    emailjs.init({
+        publicKey: PUBLIC_KEY,
+        limitRate: {
+            id: "contact-form",
+            throttle: 10000
+        }
+    });
+
+    const form = document.getElementById("contact-form");
+    const button = document.getElementById("send-button");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        button.disabled = true;
+        button.textContent = "Sending...";
+        status.textContent = "";
+
+        try {
+            await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form);
+
+            form.reset();
+            status.className = "col-12 text-success";
+            status.textContent = "Your message has been sent successfully.";
+        } catch (error) {
+            console.error("EmailJS error:", error);
+            status.className = "col-12 text-danger";
+            status.textContent = "Message could not be sent. Please try again later.";
+        } finally {
+            button.disabled = false;
+            button.textContent = "Send Message";
+        }
+    });
+</script>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
